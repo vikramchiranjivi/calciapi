@@ -1,1 +1,43 @@
+name: Deploy to EC2
 
+on:
+  push:
+    branches:
+      - master  # Your branch name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+
+    - name: Build with Maven
+      run: mvn clean package -DskipTests
+
+    - name: Copy files to EC2
+      env:
+        EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+        EC2_USER: ${{ secrets.EC2_USER }}
+      run: |
+        echo "$EC2_SSH_KEY" > key.pem
+        chmod 600 key.pem
+        scp -o StrictHostKeyChecking=no -i key.pem target/*.jar $EC2_USER@$EC2_HOST:~/myapp/app.jar
+
+    - name: Restart application on EC2
+      env:
+        EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+        EC2_USER: ${{ secrets.EC2_USER }}
+      run: |
+        ssh -o StrictHostKeyChecking=no -i key.pem $EC2_USER@$EC2_HOST << 'EOF'
+          pkill -f 'java -jar' || true
+          nohup java -jar ~/myapp/app.jar > ~/myapp/app.log 2>&1 &
+        EOF
