@@ -21,8 +21,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Step 3: Copy files to EC2 instance using SSH
-      - name: Copy files to EC2
+      # Step 3: Build the project
+      - name: Build with Maven
+        run: ./mvnw clean package
+
+      # Step 4: Copy the JAR file to EC2 instance using SSH
+      - name: Copy JAR to EC2
         env:
           EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
           EC2_HOST: ${{ secrets.EC2_HOST }}
@@ -32,9 +36,9 @@ jobs:
           echo "$EC2_SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H $EC2_HOST >> ~/.ssh/known_hosts
-          scp -i ~/.ssh/id_rsa -r * $EC2_USER@$EC2_HOST:~/myapp
+          scp -i ~/.ssh/id_rsa target/calculatorapi-0.0.1-SNAPSHOT.jar $EC2_USER@$EC2_HOST:~/myapp
 
-      # Step 4: SSH into EC2 and restart the application
+      # Step 5: SSH into EC2 and restart the application
       - name: Restart application on EC2
         env:
           EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
@@ -47,5 +51,5 @@ jobs:
             # Stop any running instances of the app (if applicable)
             pkill -f 'java -jar' || true
             # Start the application
-            nohup java -jar target/your-app.jar > output.log 2>&1 &
+            nohup java -jar calculatorapi-0.0.1-SNAPSHOT.jar > output.log 2>&1 &
           EOF
