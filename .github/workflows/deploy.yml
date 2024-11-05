@@ -23,7 +23,9 @@ jobs:
 
       # Step 3: Build the project
       - name: Build with Maven
-        run: ./mvnw clean package
+        run: |
+          chmod +x mvnw  # Ensure the Maven Wrapper is executable
+          ./mvnw clean package  # Build the project
 
       # Step 4: Copy the JAR file to EC2 instance using SSH
       - name: Copy JAR to EC2
@@ -36,6 +38,7 @@ jobs:
           echo "$EC2_SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H $EC2_HOST >> ~/.ssh/known_hosts
+          # Ensure you're copying the correct JAR file name
           scp -i ~/.ssh/id_rsa target/calculatorapi-0.0.1-SNAPSHOT.jar $EC2_USER@$EC2_HOST:~/myapp
 
       # Step 5: SSH into EC2 and restart the application
@@ -50,6 +53,6 @@ jobs:
             cd ~/myapp
             # Stop any running instances of the app (if applicable)
             pkill -f 'java -jar' || true
-            # Start the application
+            # Start the application in the background
             nohup java -jar calculatorapi-0.0.1-SNAPSHOT.jar > output.log 2>&1 &
           EOF
