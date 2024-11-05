@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController  // Marks this class as a REST controller
 @RequestMapping("/calculator")  // Base URL path for the API
+@CrossOrigin(origins = "*")  // Allow all origins for CORS
 public class CalculatorController {
 
     // Addition endpoint

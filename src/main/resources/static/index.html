@@ -33,15 +33,19 @@
     <div id="result"></div>
 
     <script>
+        // Set the API base URL based on the environment
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        const apiBaseUrl = isLocal ? 'http://localhost:8080' : 'http://65.0.127.181:8080';  // Update to your EC2 public IP
+
         // JavaScript function to call the API based on user input
         async function performCalculation() {
             // Get input values
             const a = document.getElementById("numberA").value;
             const b = document.getElementById("numberB").value;
             const operation = document.getElementById("operation").value;
-            
+
             // Define the API URL based on the selected operation
-            const url = `http://localhost:8080/calculator/${operation}?a=${a}&b=${b}`;
+            const url = `${apiBaseUrl}/calculator/${operation}?a=${a}&b=${b}`;
 
             try {
                 // Make the API request
