@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Push</title>
+</head>
+<body>
+    <h1>Git Push</h1>
+    <form id="gitForm">
+        <label for="commitMessage">Commit Message:</label>
+        <input type="text" id="commitMessage" name="commitMessage" required><br><br>
+        <button type="submit">Push to GitHub</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        document.getElementById("gitForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get the commit message from the form
+            const commitMessage = document.getElementById("commitMessage").value;
+
+            // Send the commit message to the Spring Boot backend
+            fetch("/push-to-github", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ commitMessage: commitMessage })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display the response
+                const responseDiv = document.getElementById("response");
+                if (data.message) {
+                    responseDiv.innerHTML = `<p style="color:green;">${data.message}</p>`;
+                } else {
+                    responseDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
+                }
+            })
+            .catch(error => {
+                document.getElementById("response").innerHTML = `<p style="color:red;">Error: ${error}</p>`;
+            });
+        });
+    </script>
+</body>
+</html>
