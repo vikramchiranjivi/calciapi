@@ -28,7 +28,7 @@ public class GitController {
 
         try {
             // Path to your STS project (adjust the path to your local project directory)
-            String repoPath = "/path/to/your/repo"; // Replace this with the actual path of your Git repository
+            String repoPath = "/home/ec2-user/myapp"; // Replace this with the actual path of your Git repository
 
             // Open the Git repository
             Git git = Git.open(new File(repoPath));
