@@ -17,7 +17,7 @@ public class GitController {
 
     @GetMapping("/push")
     public String pushPage() {
-        return "push"; // This will look for push.html in src/main/resources/static
+        return "redirect:/push.html"; // This will look for push.html in src/main/resources/static
     }
 
     @PostMapping("/push-to-github")
