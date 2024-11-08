@@ -1,0 +1,13 @@
+2024-11-08T07:29:13.885+05:30  INFO 31036 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Starting CalculatorapiApplication using Java 17 with PID 31036 (C:\Users\harih\git\calciapi\target\classes started by harih in C:\Users\harih\git\calciapi)
+2024-11-08T07:29:13.891+05:30  INFO 31036 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T07:29:14.963+05:30  INFO 31036 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-08T07:29:14.985+05:30  INFO 31036 --- [calculatorapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-08T07:29:14.986+05:30  INFO 31036 --- [calculatorapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-08T07:29:15.070+05:30  INFO 31036 --- [calculatorapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-08T07:29:15.071+05:30  INFO 31036 --- [calculatorapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1115 ms
+2024-11-08T07:29:15.195+05:30  INFO 31036 --- [calculatorapi] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-08T07:29:15.574+05:30  INFO 31036 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-08T07:29:15.588+05:30  INFO 31036 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Started CalculatorapiApplication in 2.537 seconds (process running for 3.28)
+2024-11-08T07:29:21.978+05:30  INFO 31036 --- [calculatorapi] [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-08T07:29:21.982+05:30  INFO 31036 --- [calculatorapi] [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-11-08T07:29:22.120+05:30  INFO 31036 --- [calculatorapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
