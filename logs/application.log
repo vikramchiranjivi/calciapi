@@ -27,3 +27,20 @@
 2024-11-08T15:43:40.607+05:30  INFO 23156 --- [calculatorapi] [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2024-11-08T15:43:40.610+05:30  INFO 23156 --- [calculatorapi] [RMI TCP Connection(4)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2024-11-08T15:43:40.712+05:30  INFO 23156 --- [calculatorapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-11-08T21:44:05.624+05:30  INFO 28096 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Starting CalculatorapiApplication using Java 17 with PID 28096 (C:\Users\harih\git\calciapi\target\classes started by harih in C:\Users\harih\git\calciapi)
+2024-11-08T21:44:05.629+05:30  INFO 28096 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T21:44:07.480+05:30  INFO 28096 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-08T21:44:07.510+05:30  INFO 28096 --- [calculatorapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-08T21:44:07.511+05:30  INFO 28096 --- [calculatorapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-08T21:44:07.617+05:30  INFO 28096 --- [calculatorapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-08T21:44:07.617+05:30  INFO 28096 --- [calculatorapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1932 ms
+2024-11-08T21:44:07.792+05:30  INFO 28096 --- [calculatorapi] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-08T21:44:08.325+05:30  INFO 28096 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-08T21:44:08.341+05:30  INFO 28096 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Started CalculatorapiApplication in 3.624 seconds (process running for 21.81)
+2024-11-08T21:44:21.939+05:30  INFO 28096 --- [calculatorapi] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-08T21:44:21.939+05:30  INFO 28096 --- [calculatorapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-08T21:44:21.941+05:30  INFO 28096 --- [calculatorapi] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-08T21:44:37.254+05:30  WARN 28096 --- [calculatorapi] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'a': Failed to convert value of type 'java.lang.String' to required type 'double'; empty String]
+2024-11-08T21:49:36.894+05:30  INFO 28096 --- [calculatorapi] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-08T21:49:36.900+05:30  INFO 28096 --- [calculatorapi] [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-11-08T21:49:37.037+05:30  INFO 28096 --- [calculatorapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
