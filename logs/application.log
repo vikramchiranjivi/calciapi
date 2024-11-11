@@ -27,3 +27,55 @@
 2024-11-11T11:08:46.499+05:30  INFO 25624 --- [calculatorapi] [RMI TCP Connection(34)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2024-11-11T11:08:46.504+05:30  INFO 25624 --- [calculatorapi] [RMI TCP Connection(34)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2024-11-11T11:08:46.620+05:30  INFO 25624 --- [calculatorapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-11-11T17:02:41.500+05:30  INFO 28792 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Starting CalculatorapiApplication using Java 17 with PID 28792 (C:\Users\harih\git\calciapi\target\classes started by harih in C:\Users\harih\git\calciapi)
+2024-11-11T17:02:41.502+05:30  INFO 28792 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-11T17:02:42.283+05:30  INFO 28792 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-11T17:02:42.295+05:30  INFO 28792 --- [calculatorapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-11T17:02:42.295+05:30  INFO 28792 --- [calculatorapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-11T17:02:42.350+05:30  INFO 28792 --- [calculatorapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-11T17:02:42.351+05:30  INFO 28792 --- [calculatorapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 813 ms
+2024-11-11T17:02:42.441+05:30  INFO 28792 --- [calculatorapi] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-11T17:02:42.660+05:30  INFO 28792 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-11T17:02:42.667+05:30  INFO 28792 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Started CalculatorapiApplication in 1.558 seconds (process running for 2.013)
+2024-11-11T17:22:18.218+05:30  INFO 28792 --- [calculatorapi] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-11T17:22:18.219+05:30  INFO 28792 --- [calculatorapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-11T17:22:18.222+05:30  INFO 28792 --- [calculatorapi] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-11-11T22:13:10.786+05:30  INFO 28792 --- [calculatorapi] [RMI TCP Connection(178)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-11T22:13:10.837+05:30  INFO 28792 --- [calculatorapi] [RMI TCP Connection(178)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-11-11T22:13:10.976+05:30  INFO 28792 --- [calculatorapi] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-11-11T22:34:45.713+05:30  INFO 4732 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Starting CalculatorapiApplication using Java 17 with PID 4732 (C:\Users\harih\git\calciapi\target\classes started by harih in C:\Users\harih\git\calciapi)
+2024-11-11T22:34:45.720+05:30  INFO 4732 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-11T22:34:45.807+05:30  INFO 22764 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Starting CalculatorapiApplication using Java 17 with PID 22764 (C:\Users\harih\git\calciapi\target\classes started by harih in C:\Users\harih\git\calciapi)
+2024-11-11T22:34:45.816+05:30  INFO 22764 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-11-11T22:34:49.512+05:30  INFO 4732 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-11T22:34:49.521+05:30  INFO 22764 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-11T22:34:49.545+05:30  INFO 4732 --- [calculatorapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-11T22:34:49.545+05:30  INFO 4732 --- [calculatorapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-11T22:34:49.550+05:30  INFO 22764 --- [calculatorapi] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-11T22:34:49.551+05:30  INFO 22764 --- [calculatorapi] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-11T22:34:49.777+05:30  INFO 4732 --- [calculatorapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-11T22:34:49.778+05:30  INFO 4732 --- [calculatorapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3822 ms
+2024-11-11T22:34:49.791+05:30  INFO 22764 --- [calculatorapi] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-11T22:34:49.792+05:30  INFO 22764 --- [calculatorapi] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3746 ms
+2024-11-11T22:34:50.061+05:30  INFO 4732 --- [calculatorapi] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-11T22:34:50.070+05:30  INFO 22764 --- [calculatorapi] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-11-11T22:34:50.839+05:30  WARN 22764 --- [calculatorapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-11-11T22:34:50.881+05:30  INFO 4732 --- [calculatorapi] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-11T22:34:50.883+05:30  INFO 22764 --- [calculatorapi] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-11T22:34:50.905+05:30  INFO 4732 --- [calculatorapi] [main] c.e.c.CalculatorapiApplication           : Started CalculatorapiApplication in 6.51 seconds (process running for 40.371)
+2024-11-11T22:34:50.948+05:30 ERROR 22764 --- [calculatorapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
